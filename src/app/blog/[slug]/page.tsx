@@ -2,6 +2,7 @@
 
 import { useParams } from "next/navigation";
 import Image from "next/image";
+import CommentSection from "@/app/components/Comment";
 
 type BlogData = {
   [key: string]: {
@@ -17,7 +18,7 @@ const blogData: BlogData = {
   "ai-advancements-2025": {
     date: "December 31, 2024",
     title: "AI Advancements in 2025",
-    image: "/images/Ai-img.jpeg",
+    image: "/images/AI-in-2025-and-Beyond.webp",
     description: `Artificial intelligence in 2025 is poised to revolutionize industries...`,
     details: [
       {
@@ -156,6 +157,7 @@ export default function BlogDetailPage() {
             </div>
           ))}
         </div>
+        <CommentSection blogId="some-blog-id"/>
       </div>
     </div>
   );
